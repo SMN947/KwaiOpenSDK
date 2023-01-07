@@ -1,7 +1,7 @@
-## 1 简介
-为了简化开发者接入开放平台能力,提供了服务端的SDK,开发者可以依托此SDK快速接入开放平台。
-## 2 如何接入
-在项目中POM文件引入依赖
+## 1. Introducción
+Para simplificar la capacidad de los desarrolladores de acceder a la plataforma abierta, se proporciona un SDK del lado del servidor y los desarrolladores pueden confiar en este SDK para acceder rápidamente a la plataforma abierta.
+## 2 Cómo acceder
+Introducir dependencias en el archivo POM en el proyecto
 ```lang
 <dependency>
     <groupId>com.github.kwaiopen</groupId>
@@ -9,31 +9,31 @@
     <version>1.0.3</version>
 </dependency>
 ```
-关于SDK版本号更新,请关注平台公告.
-## 3 包含组件
+Para actualizar el número de versión del SDK, preste atención al anuncio de la plataforma.
+## 3 Incluir componentes
 
 
-|组件|介绍|
+|Componente|Introducción|
 |-|-|
-|KwaiOpenOauthApi|oauth2.0协议的接口封装|
-|KwaiOpenUserApi|获取用户信息的相关接口封装|
-|KwaiOpenVideoApi|发布内容能力的相关接口封装|
-|KwaiOpenLiveApi|直播能力的相关接口封装|
+|KwaiOpenOauthApi|Encapsulación de interfaz del protocolo oauth2.0|
+|KwaiOpenUserApi|Encapsulación de interfaz relacionada para obtener información del usuario|
+|KwaiOpenVideoApi|Encapsulación de interfaz relacionada con la capacidad de publicar contenido|
+|KwaiOpenLiveApi|Encapsulación de interfaz relacionada de la capacidad de transmisión en vivo|
 
 <br/>
 
 #### 3.1 KwaiOpenOauthApi
 
 
-#### 3.1.1初始化
+#### 3.1.1 Inicialización
 ```lang
 KwaiOpenOauthApi kwaiOpenOauthApi = KwaiOpenOauthApi.init(appId);
 ```
-建议声明为javabean或者静态变量.
+Se recomienda declararlo como javabean o variable estática.
 <br/>
 #### 3.1.2 KwaiOpenOauthApi.getAccessToken
-授权code置换access_token
-|请求参数|说明|
+Reemplazo del código de autorización access_token
+|Parámetro de solicitud|Descripción|
 |-|-|-|
 |code|授权流程获取的授权code|
 |appSecret|注册app时获取的appSecret|
